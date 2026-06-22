@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="visual-world-2 placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#110926"/>
+      <stop offset="50%" stop-color="#1d3e68"/>
+      <stop offset="100%" stop-color="#4a0f57"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="300" cy="250" r="130" fill="#9effbf" fill-opacity="0.15"/>
+  <circle cx="1200" cy="520" r="220" fill="#55baff" fill-opacity="0.16"/>
+  <circle cx="860" cy="260" r="160" fill="#ff74f0" fill-opacity="0.16"/>
+  <text x="800" y="455" fill="#f2f3ff" font-family="Inter, Arial, sans-serif" font-size="60" text-anchor="middle" letter-spacing="2">visual-world-2</text>
+  <text x="800" y="520" fill="#9de0ff" font-family="Inter, Arial, sans-serif" font-size="28" text-anchor="middle" opacity="0.9">Replace with project evidence image</text>
+</svg>
