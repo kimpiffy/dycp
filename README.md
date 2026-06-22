@@ -20,8 +20,8 @@ npm run build
 
 Update section text, links, and image paths in:
 
-- `/home/runner/work/dycp/dycp/src/data/content.js`
+- `src/data/content.js`
 
 Replace placeholder images in:
 
-- `/home/runner/work/dycp/dycp/public/images`
+- `public/images`

@@ -59,7 +59,7 @@ export const content = {
     ],
   },
   workshops: {
-    text: 'Workshops allow participants to contribute directly to installations, i’d like to take this one step further and have the opportunity to design an installation with them; making the environment something built with people rather than simply shown to them.',
+    text: "Workshops allow participants to contribute directly to installations, I'd like to take this one step further and have the opportunity to design an installation with them; making the environment something built with people rather than simply shown to them.",
   },
   digital: {
     text: 'My practice is now expanding into creative technology, projection mapping, interactive web design and digital immersivity. I am exploring how digital tools can extend the same values that run through my physical work: participation, atmosphere, accessibility, storytelling and shared experience.',
