@@ -34,6 +34,7 @@ function App() {
         images={content.introduction.images}
         reducedMotion={reducedMotion}
         mediaAlignment="center"
+        mediaNudge="intro"
       />
 
       <StorySection
@@ -47,15 +48,27 @@ function App() {
       </StorySection>
 
       <StorySection
+        id="i-am-piffy"
         title="I Am Piffy"
         tone="magenta"
         reverse
-        images={[...content.iAmPiffy.images, { src: '/images/visual-world-4.svg', alt: 'Symbolic mixed-media composition.' }]}
+        className="i-am-piffy-top i-am-piffy-media"
+        images={content.iAmPiffy.images.slice(0, 3)}
         reducedMotion={reducedMotion}
       >
         <p className="project-collaborator">{content.iAmPiffy.intro}</p>
         {renderParagraphs(content.iAmPiffy.text)}
       </StorySection>
+
+      <StorySection
+        id="i-am-piffy-panorama"
+        tone="magenta"
+        hideTitle
+        images={content.iAmPiffy.images.slice(3, 6)}
+        reducedMotion={reducedMotion}
+        mediaAlignment="center"
+        mediaNudge="intro"
+      />
 
       <ProjectIntro project={content.bridgesOfLight} reducedMotion={reducedMotion} />
 
@@ -65,10 +78,10 @@ function App() {
         title="Workshops / co-creation"
         tone="glow"
         images={[
-          { src: '/images/intro-kim-2.svg', alt: 'Kim preparing immersive exhibition materials.' },
-          { src: '/images/tree-stars.svg', alt: 'Visitors hanging wish stars from branches.' },
-          { src: '/images/bridges-writing.svg', alt: 'People writing wishes during the event.' },
-          { src: '/images/digital-web.svg', alt: 'Interactive web visual experiment.' },
+          { src: '/images/intro-kim-2.webp', alt: 'Kim preparing immersive exhibition materials.' },
+          { src: '/images/tree-stars.webp', alt: 'Visitors hanging wish stars from branches.' },
+          { src: '/images/bridges-writing.webp', alt: 'People writing wishes during the event.' },
+          { src: '/images/digital-web.webp', alt: 'Interactive web visual experiment.' },
         ]}
         reducedMotion={reducedMotion}
       >

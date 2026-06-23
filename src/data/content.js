@@ -7,27 +7,30 @@ export const content = {
   introduction: {
     text: 'Hi, I’m Kim Piffy.',
     images: [
-      { src: '/images/intro-kim-1.svg', alt: 'Portrait of Kim in atmospheric light.' },
-      { src: '/images/intro-kim-2.svg', alt: 'Kim preparing immersive exhibition materials.' },
-      { src: '/images/intro-kim-3.svg', alt: 'Kim inside a lit installation space.' },
+      { src: '/images/intro-kim-1.webp', alt: 'Portrait of Kim in atmospheric light.' },
+      { src: '/images/intro-kim-2.webp', alt: 'Kim preparing immersive exhibition materials.' },
+      { src: '/images/intro-kim-3.webp', alt: 'Kim inside a lit installation space.' },
     ],
   },
   visualWorlds: {
     text: 'My interests in mythology, philosophy and semiotics are driving influences for my art and illustration. I often work with textiles and design surface patterns.\n\nWhatever medium I am working in, I have always been drawn to finding ways to incorporate light as a material.',
     images: [
-      { src: '/images/visual-world-1.svg', alt: 'Mythic artwork with luminous symbols.' },
-      { src: '/images/visual-world-2.svg', alt: 'Contemporary illustration with layered forms.' },
-      { src: '/images/visual-world-3.svg', alt: 'Mandalas and pattern design details.' },
-      { src: '/images/visual-world-4.svg', alt: 'Symbolic mixed-media composition.' },
+      { src: '/images/visual-world-1.webp', alt: 'Mythic artwork with luminous symbols.' },
+      { src: '/images/visual-world-2.webp', alt: 'Contemporary illustration with layered forms.' },
+      { src: '/images/visual-world-3.webp', alt: 'Mandalas and pattern design details.' },
+      { src: '/images/visual-world-4.webp', alt: 'Symbolic mixed-media composition.' },
     ],
   },
   iAmPiffy: {
-    intro: 'Self funded and curated exhibition at Centrespace Gallery., Bristol.',
-    text: 'My first solo exhibition presented an introspective, autobiographical body of work that drew on archetypes to shift from my own experience into universally recognisable themes.\n\nI was naturally drawn to curating an environment immersed in ultra-violet.',
+    intro: 'Self-funded and curated exhibition at Centrespace Gallery, Bristol.',
+    text: 'My first solo exhibition presented an introspective, autobiographical body of work that drew on archetypes to shift from personal experience into universally recognisable themes.\n\nI curated an ultra-violet environment that transformed the gallery into an immersive audio-visual space. I organised an accompanying independent makers\' market and experimented with VJing software for the first time, which allowed me to project kaleidoscopic animations generated from my artworks and synchronise them to music played by live DJ\'s at the open view.\n\nThe exhibition became an early exploration of immersive space.',
     images: [
-      { src: '/images/i-am-piffy-1.svg', alt: 'UV-lit autobiographical artwork display.' },
-      { src: '/images/i-am-piffy-2.svg', alt: 'Visitors moving through I Am Piffy exhibition.' },
-      { src: '/images/i-am-piffy-3.svg', alt: 'Glowing details from I Am Piffy pieces.' },
+      { src: '/images/i-am-piffy-1.webp', alt: 'UV-lit autobiographical artwork display.' },
+      { src: '/images/i-am-piffy-2.webp', alt: 'Visitors moving through I Am Piffy exhibition.' },
+      { src: '/images/i-am-piffy-3.webp', alt: 'Glowing details from I Am Piffy pieces.' },
+      { src: '/images/i-am-piffy-4.webp', alt: 'Delinquency.' },
+      { src: '/images/i-am-piffy-5.webp', alt: 'Vanity.' },
+      { src: '/images/i-am-piffy-6.webp', alt: 'Transcendence.' },
     ],
   },
   bridgesOfLight: {
@@ -36,11 +39,11 @@ export const content = {
     tone: 'blue',
     text: 'My first creative health commission was a surreal landscape which featured atmospheric and symbolic elements including 1,000 origami cranes.\n\nNeurodivergent participants and local young people co-created fish for the river and footprints to light the path.\n\nVisitors were invited to walk through the space, interact with the environment, and share their own message for others to read surrounding a "portal" to the future!',
     sequence: [
-      { src: '/images/bridges-cranes.svg', alt: 'Paper cranes suspended in glowing light.' },
-      { src: '/images/bridges-river.svg', alt: 'A glowing river path through the installation.' },
-      { src: '/images/bridges-wishing-wall.svg', alt: 'Wishing wall filled with participant messages.' },
-      { src: '/images/bridges-writing.svg', alt: 'People writing wishes during the event.' },
-      { src: '/images/bridges-interaction.svg', alt: 'Public interaction inside the immersive space.' },
+      { src: '/images/bridges-cranes.webp', alt: 'Paper cranes suspended in glowing light.' },
+      { src: '/images/bridges-river.webp', alt: 'A glowing river path through the installation.' },
+      { src: '/images/bridges-wishing-wall.webp', alt: 'Wishing wall filled with participant messages.' },
+      { src: '/images/bridges-writing.webp', alt: 'People writing wishes during the event.' },
+      { src: '/images/bridges-interaction.webp', alt: 'Public interaction inside the immersive space.' },
     ],
   },
   wishingTree: {
@@ -51,11 +54,11 @@ export const content = {
     insideText:
       'The project introduced me to new materials and solidified my understanding of spatial planning, audience flow and accessible participation.',
     insideImages: [
-      { src: '/images/tree-underneath.svg', alt: 'Young people sitting beneath the glowing tree.' },
-      { src: '/images/tree-wheelchair.svg', alt: 'Wheelchair user participating in the tree space.' },
-      { src: '/images/tree-stars.svg', alt: 'Visitors hanging wish stars from branches.' },
-      { src: '/images/tree-stars-close.svg', alt: 'Close-up of glowing stars with handwritten wishes.' },
-      { src: '/images/tree-texture.svg', alt: 'Textural detail of the tree structure and lighting.' },
+      { src: '/images/tree-underneath.webp', alt: 'Young people sitting beneath the glowing tree.' },
+      { src: '/images/tree-wheelchair.webp', alt: 'Wheelchair user participating in the tree space.' },
+      { src: '/images/tree-stars.webp', alt: 'Visitors hanging wish stars from branches.' },
+      { src: '/images/tree-stars-close.webp', alt: 'Close-up of glowing stars with handwritten wishes.' },
+      { src: '/images/tree-texture.webp', alt: 'Textural detail of the tree structure and lighting.' },
     ],
   },
   workshops: {
@@ -64,10 +67,10 @@ export const content = {
   digital: {
     text: 'My practice is now expanding into creative technology, projection mapping, interactive web design and digital immersivity. I am exploring how digital tools can extend the same values that run through my physical work: participation, atmosphere, accessibility, storytelling and shared experience.',
     images: [
-      { src: '/images/digital-mapping.svg', alt: 'Projection mapping trial with layered light.' },
-      { src: '/images/digital-lightspace.svg', alt: 'LightSpace app interface experiments.' },
-      { src: '/images/digital-web.svg', alt: 'Interactive web visual experiment.' },
-      { src: '/images/digital-particles.svg', alt: 'Digital visual showing responsive particles.' },
+      { src: '/images/digital-mapping.webp', alt: 'Projection mapping trial with layered light.' },
+      { src: '/images/digital-lightspace.webp', alt: 'LightSpace app interface experiments.' },
+      { src: '/images/digital-web.webp', alt: 'Interactive web visual experiment.' },
+      { src: '/images/digital-particles.webp', alt: 'Digital visual showing responsive particles.' },
     ],
   },
   closing: {

@@ -112,35 +112,9 @@ h2 {
   filter: drop-shadow(0 0 4px rgba(224, 255, 154, 0.1));
 }
 
-.blotter-title.is-blotter-ready {
-  color: transparent;
-  text-shadow: none;
-  -webkit-text-fill-color: transparent;
-}
-
-.blotter-title-canvas {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+.blotter-title-text {
+  position: relative;
   z-index: 1;
-  mix-blend-mode: screen;
-  opacity: 0.9;
-  filter:
-    drop-shadow(0 0 10px rgba(224, 255, 154, 0.32))
-    drop-shadow(0 0 18px rgba(224, 255, 154, 0.18))
-    drop-shadow(0 0 22px rgba(255, 119, 214, 0.08));
-}
-
-.blotter-title-canvas canvas {
-  display: block;
-  filter:
-    drop-shadow(0 0 12px rgba(224, 255, 154, 0.35))
-    drop-shadow(0 0 26px rgba(224, 255, 154, 0.2));
-}
-
-.blotter-layer {
-  width: 100%;
-  height: 100%;
 }
 
 .hero {
@@ -305,6 +279,66 @@ h2 {
   order: 1;
 }
 
+#i-am-piffy-panorama {
+  padding-top: 0.75rem;
+}
+
+.i-am-piffy-top {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: start;
+}
+.i-am-piffy-media .gallery-collage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-rows: auto auto;
+  align-items: start;
+  gap: 1rem 1.1rem;
+}
+
+.i-am-piffy-media .gallery-collage .image-reveal {
+  flex: none;
+  max-width: none;
+  width: 100%;
+}
+
+.i-am-piffy-media .gallery-collage .image-reveal:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  transform: rotate(-3deg) translateY(0.5rem);
+  z-index: 3;
+}
+
+.i-am-piffy-media .gallery-collage .image-reveal:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: start;
+  transform: rotate(2deg) translateX(2rem) translateY(-1rem);
+  z-index: 2;
+}
+
+.i-am-piffy-media .gallery-collage .image-reveal:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: start;
+  transform: rotate(1deg) translateY(-0.25rem);
+  z-index: 1;
+}
+
+.i-am-piffy-media {
+  margin-top: 0.35rem;
+}
+
+.i-am-piffy-media .gallery {
+  justify-content: flex-start;
+}
+
+.i-am-piffy-media .gallery-collage .image-reveal {
+  flex: none;
+  max-width: none;
+  width: 100%;
+}
+
 .story-body.copy-only {
   grid-template-columns: minmax(0, 1fr);
 }
@@ -351,6 +385,41 @@ h2 {
 .story-section.media-center .gallery-collage .image-reveal {
   flex: 1 1 clamp(170px, 25vw, 290px);
   max-width: 320px;
+}
+
+.story-section.media-nudge-intro .gallery-collage {
+  gap: 15px;
+}
+
+.story-section.media-nudge-intro .gallery-collage .image-reveal {
+  margin-left: 0;
+}
+
+.story-section.media-nudge-intro .gallery-collage .image-reveal.visible:nth-child(1) {
+  transform: rotate(-20deg) translateY(0);
+  z-index: 1;
+}
+
+.story-section.media-nudge-intro .gallery-collage .image-reveal.visible:nth-child(2) {
+  transform: rotate(0deg) translateY(0);
+  z-index: 2;
+}
+
+.story-section.media-nudge-intro .gallery-collage .image-reveal.visible:nth-child(3) {
+  transform: rotate(20deg) translateY(0);
+  z-index: 3;
+}
+
+.story-section.media-nudge-intro .gallery-collage .image-reveal.visible:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.story-section.media-nudge-intro .gallery-collage .image-reveal.visible:nth-child(2) {
+  transition-delay: 140ms;
+}
+
+.story-section.media-nudge-intro .gallery-collage .image-reveal.visible:nth-child(3) {
+  transition-delay: 280ms;
 }
 
 .gallery-collage .image-reveal:not(:first-child) {
@@ -417,6 +486,16 @@ h2 {
   z-index: 5;
 }
 
+#i-am-piffy .gallery-collage .image-reveal.visible:nth-child(3) {
+  margin-top: -25px;
+  transform: rotate(-1deg) translateY(-50px);
+}
+
+.i-am-piffy-panorama-media .image-reveal.full-width {
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  background: #ffffff;
+}
+
 .image-reveal img {
   display: block;
   width: 100%;
@@ -427,6 +506,14 @@ h2 {
 
 .image-reveal.full-width img {
   min-height: min(68vh, 540px);
+}
+
+.i-am-piffy-panorama-media .image-reveal.full-width img {
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left 5px top 10px;
 }
 
 .story-section.media-only .story-body {
@@ -582,6 +669,10 @@ h2 {
     margin-top: 0;
   }
 
+  .i-am-piffy-panorama-media {
+    width: 100%;
+  }
+
   .story-section.has-full-media .story-media,
   .story-section.media-below .story-media {
     width: 100%;
@@ -604,6 +695,10 @@ h2 {
 
   .image-reveal img {
     min-height: 180px;
+  }
+
+  .i-am-piffy-panorama-media .image-reveal img {
+    min-height: 0;
   }
 }
 

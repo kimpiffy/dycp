@@ -14,11 +14,14 @@ function StorySection({
   fullWidthMedia = false,
   mediaNudge = 'default',
   mediaAlignment = 'side',
+  className = '',
 }) {
+  const staggerStep = mediaNudge === 'intro' ? 180 : 100
+
   return (
     <section
       id={id}
-      className={`journey-section tone-${tone} story-section ${compact ? 'compact' : ''} ${reverse ? 'is-reverse' : ''} ${!children ? 'media-only' : ''} ${fullWidthMedia ? 'has-full-media' : ''} ${mediaAlignment === 'below' ? 'media-below' : ''} ${mediaAlignment === 'center' ? 'media-center' : ''} ${mediaNudge !== 'default' ? `media-nudge-${mediaNudge}` : ''}`.trim()}
+      className={`journey-section tone-${tone} story-section ${compact ? 'compact' : ''} ${reverse ? 'is-reverse' : ''} ${!children ? 'media-only' : ''} ${fullWidthMedia ? 'has-full-media' : ''} ${mediaAlignment === 'below' ? 'media-below' : ''} ${mediaAlignment === 'center' ? 'media-center' : ''} ${mediaNudge !== 'default' ? `media-nudge-${mediaNudge}` : ''} ${className}`.trim()}
     >
       <div className="section-inner story-layout">
         <div className={`story-body ${reverse ? 'is-reverse' : ''} ${!images ? 'copy-only' : ''}`.trim()}>
@@ -30,7 +33,12 @@ function StorySection({
           ) : null}
           {images ? (
             <div className="story-media">
-              <GallerySequence images={images} reducedMotion={reducedMotion} fullWidth={fullWidthMedia} />
+              <GallerySequence
+                images={images}
+                reducedMotion={reducedMotion}
+                fullWidth={fullWidthMedia}
+                staggerStep={staggerStep}
+              />
             </div>
           ) : null}
         </div>
