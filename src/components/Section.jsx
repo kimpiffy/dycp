@@ -1,8 +1,10 @@
+import BlotterTitle from './BlotterTitle'
+
 function Section({ id, title, children, tone = 'glow', compact = false }) {
   return (
     <section id={id} className={`journey-section tone-${tone} ${compact ? 'compact' : ''}`}>
       <div className="section-inner">
-        <h2>{title}</h2>
+        {title ? <BlotterTitle as="h2" text={title} /> : null}
         {children}
       </div>
     </section>

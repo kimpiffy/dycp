@@ -1,12 +1,11 @@
 export const content = {
   hero: {
     title: 'KIM PIFFY',
-    role: 'Visual Artist • Experience Designer • Creative Technologist',
-    subtitle:
-      'Creating immersive, sensory-aware experiences through art, light, participation and digital experimentation.',
+    role: 'Visual Artist • Installation Designer • Creative Technologist',
+    subtitle: 'Creating sensory experiences  across digital and physical spaces.',
   },
   introduction: {
-    text: 'Hi, I’m Kim Piffy. My practice began with making visual worlds and has evolved into designing immersive environments that people can step into, shape, and experience together.',
+    text: 'Hi, I’m Kim Piffy.',
     images: [
       { src: '/images/intro-kim-1.svg', alt: 'Portrait of Kim in atmospheric light.' },
       { src: '/images/intro-kim-2.svg', alt: 'Kim preparing immersive exhibition materials.' },
@@ -14,7 +13,7 @@ export const content = {
     ],
   },
   visualWorlds: {
-    text: 'My early work explored mythology, philosophy, symbolism and technology through contemporary art, illustration, mandalas and surface pattern design.',
+    text: 'My interests in mythology, philosophy and semiotics are driving influences for my art and illustration. I often work with textiles and design surface patterns.\n\nWhatever medium I am working in, I have always been drawn to finding ways to incorporate light as a material.',
     images: [
       { src: '/images/visual-world-1.svg', alt: 'Mythic artwork with luminous symbols.' },
       { src: '/images/visual-world-2.svg', alt: 'Contemporary illustration with layered forms.' },
@@ -23,7 +22,8 @@ export const content = {
     ],
   },
   iAmPiffy: {
-    text: 'My first solo exhibition, I Am Piffy, showcased an autobiographical collection under UV light. I was interested in creating artwork but also how an exhibition could become an immersive environment.',
+    intro: 'Self funded and curated exhibition at Centrespace Gallery., Bristol.',
+    text: 'My first solo exhibition presented an introspective, autobiographical body of work that drew on archetypes to shift from my own experience into universally recognisable themes.\n\nI was naturally drawn to curating an environment immersed in ultra-violet.',
     images: [
       { src: '/images/i-am-piffy-1.svg', alt: 'UV-lit autobiographical artwork display.' },
       { src: '/images/i-am-piffy-2.svg', alt: 'Visitors moving through I Am Piffy exhibition.' },
@@ -31,10 +31,10 @@ export const content = {
     ],
   },
   bridgesOfLight: {
-    title: '“Imagining a Bright Future”',
+    title: 'Imagining a Bright Future',
     collaborator: 'An immersive light installation for Bridges of Light by Severn Arts, Worcester.',
     tone: 'blue',
-    text: 'This project was my first participatory environment featuring atmospheric and symbolic elements. Neurodivergent participants and local young people co-created wishing fish, footprints that became part of an immersive UV landscape. Visitors were invited to walk through the space, interact with the work, and share their own message for others to read.',
+    text: 'My first creative health commission was a surreal landscape which featured atmospheric and symbolic elements including 1,000 origami cranes.\n\nNeurodivergent participants and local young people co-created fish for the river and footprints to light the path.\n\nVisitors were invited to walk through the space, interact with the environment, and share their own message for others to read surrounding a "portal" to the future!',
     sequence: [
       { src: '/images/bridges-cranes.svg', alt: 'Paper cranes suspended in glowing light.' },
       { src: '/images/bridges-river.svg', alt: 'A glowing river path through the installation.' },
@@ -44,12 +44,12 @@ export const content = {
     ],
   },
   wishingTree: {
-    title: '“The Wishing Tree”',
-    collaborator: 'A sensory calming zone at The Festival of Play, hosted by Scala, Worcester.',
+    title: 'The Wishing Tree',
+    collaborator: 'A sensory calming zone at The Festival of Play by Scala, Worcester.',
     tone: 'earth',
-    text: 'This immersive environment involved fabricating a large, collapsible, glowing tree structure that invited visitors to create and hang wishes from the branches. The installation evolved through each contribution, becoming a living record of the community’s collective hopes and aspirations.',
+    text: 'This ambitious involved fabricating a large, transportable, glowing tree structure that invited visitors to create and hang wishes from the branches.\n\nThe installation evolved through each contribution, becoming a living record of the community’s collective hopes and aspirations.',
     insideText:
-      'The project involved large-scale fabrication, spatial planning, UV lighting, sensory atmosphere, audience flow and accessible participation.',
+      'The project introduced me to new materials and solidified my understanding of spatial planning, audience flow and accessible participation.',
     insideImages: [
       { src: '/images/tree-underneath.svg', alt: 'Young people sitting beneath the glowing tree.' },
       { src: '/images/tree-wheelchair.svg', alt: 'Wheelchair user participating in the tree space.' },
@@ -59,7 +59,7 @@ export const content = {
     ],
   },
   workshops: {
-    text: "Workshops allow participants to contribute directly to installations, I'd like to take this one step further and have the opportunity to design an installation with them; making the environment something built with people rather than simply shown to them.",
+    text: 'Working with communities is one of the most rewarding aspects of my practice, and over time I have developed experience facilitating accessible, creative participation within a range of settings. These opportunities have shown me the value of co-creation, while also highlighting how the scope for participant involvement is often shaped by pre-existing project objectives and timelines.\n\nAs my practice develops, I am becoming increasingly interested in exploring how communities might be involved at earlier stages and how they might contribute more activley to a projects development. I see a potential period of self-development as an opportunity to strengthen my methodology which would enable me to initiate and lead projects on my own terms, confidently.',
   },
   digital: {
     text: 'My practice is now expanding into creative technology, projection mapping, interactive web design and digital immersivity. I am exploring how digital tools can extend the same values that run through my physical work: participation, atmosphere, accessibility, storytelling and shared experience.',
@@ -71,12 +71,11 @@ export const content = {
     ],
   },
   closing: {
-    text: 'From artwork to environment, from environment to participation, and from participation toward responsive digital worlds.',
-    signature: 'Kim Piffy • Immersive Artist • Experience Designer • Creative Technologist',
     links: [
-      { label: 'GitHub', href: 'https://github.com/kimpiffy' },
+      { label: 'Instagram', href: 'https://instagram.com/' },
+      { label: 'LinkedIn', href: 'https://linkedin.com/' },
       { label: 'Website', href: 'https://example.com' },
-      { label: 'Contact', href: 'mailto:hello@example.com' },
+      { label: 'GitHub', href: 'https://github.com/kimpiffy' },
     ],
   },
 }

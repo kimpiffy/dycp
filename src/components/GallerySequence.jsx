@@ -2,7 +2,7 @@ import ImageReveal from './ImageReveal'
 
 function GallerySequence({ images, reducedMotion, fullWidth = false }) {
   return (
-    <div className={`gallery ${fullWidth ? 'gallery-full-width' : ''}`}>
+    <div className={`gallery ${fullWidth ? 'gallery-full-width' : 'gallery-collage'}`}>
       {images.map((image, index) => (
         <ImageReveal
           key={image.src}
@@ -10,6 +10,7 @@ function GallerySequence({ images, reducedMotion, fullWidth = false }) {
           delay={index * 100}
           reducedMotion={reducedMotion}
           fullWidth={fullWidth}
+          index={index}
         />
       ))}
     </div>

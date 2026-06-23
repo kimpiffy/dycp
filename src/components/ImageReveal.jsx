@@ -1,8 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 
-function ImageReveal({ image, delay = 0, reducedMotion = false, fullWidth = false }) {
+function ImageReveal({ image, delay = 0, reducedMotion = false, fullWidth = false, index = 0 }) {
   const [visible, setVisible] = useState(reducedMotion)
   const imageRef = useRef(null)
+  const tilt = (() => {
+    const values = [-3.5, 2.25, -1.5, 3.75, -2.1, 1.6, -0.9, 2.8]
+
+    return values[index % values.length]
+  })()
 
   useEffect(() => {
     if (reducedMotion || !imageRef.current) {
@@ -29,7 +34,7 @@ function ImageReveal({ image, delay = 0, reducedMotion = false, fullWidth = fals
     <figure
       ref={imageRef}
       className={`image-reveal ${visible ? 'visible' : ''} ${fullWidth ? 'full-width' : ''}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ transitionDelay: `${delay}ms`, '--image-tilt': `${tilt}deg` }}
     >
       <img
         src={image.src}
