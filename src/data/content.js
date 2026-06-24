@@ -15,7 +15,8 @@ export const content = {
     ],
   },
   visualWorlds: {
-    text: 'My interests in mythology, philosophy and semiotics have always been a driving influence for my art and illustration. I often work with textiles and design surface patterns. Whatever medium I am working in, I have always been drawn to finding ways to incorporate colourful and tactile elements, and use light as a material.',
+    lead: 'My interests in mythology, philosophy and semiotics have always been a driving influence for my art and illustration.',
+    text: 'For over 10 years, and through a range of media I have explored how visual forms could communicate big ideas and emotions that I often found difficult to express in words.\n\nMy mixed media artworks are primarily conceptual and figurative but I also frequently work with textiles and design surface patterns. Whatever I am working in, I have always been drawn to finding ways to incorporate colourful and tactile elements, and have a long standing fascination with U.V light and it\'s ability to surface the \'otherworld\'.\n\nLooking back, many of my early works felt like fragments of larger worlds I hadn\'t yet discovered how to build, and I was certainly driven by a desire to create atmosphere and invite imagination beyond the edges of a single artwork, (which is especially evident in the photoshoots which featured my clothing designs).\n\nThese elements became the components which have formed the foundation and knowledge base for my expansion into installation and spatial storytelling.',
     images: [
       { src: img('images/visual-world-1.webp'), alt: 'Mythic artwork with luminous symbols.' },
       { src: img('images/visual-world-2.webp'), alt: 'Contemporary illustration with layered forms.' },
@@ -64,26 +65,21 @@ export const content = {
   },
   workshops: {
     images: [
-      { src: img('images/workshops-1.webp'), alt: 'Kim preparing immersive exhibition materials.' },
       { src: img('images/workshops-2.webp'), alt: 'Visitors hanging wish stars from branches.' },
       { src: img('images/workshops-3.webp'), alt: 'People writing wishes during the event.' },
       { src: img('images/workshops-4.webp'), alt: 'Interactive web visual experiment.' },
     ],
-    text: "Workshops allow participants to contribute directly to installations. I'd like to take this one step further and have the opportunity to design an installation with them, making the environment something built with people rather than simply shown to them.",
+    text: 'I have facilitated creative workshops with a range of community groups, including ongoing work with the Monday Night Club.\n\nThese experiences have shaped my interest in accessibility and co-creation, reinforcing my belief that environments should be flexible enough to accommodate different ways of engaging, rather than expecting people to conform to a single way of experiencing them. Working alongside people with different needs and perspectives has strengthened my understanding of how thoughtful design can create richer and more inclusive experiences for everyone.\n\nI do not view environments and artwork as things to be passively consumed, and for this reason I am increasingly interested in how participants might contribute to and influence creative work from an earlier stage in the development process.\n\nI would like to explore this further after a period of focused research and development which I believe will allow me to investigate approaches that could support more collaborative and responsive ways of designing immersive experiences.',
   },
   digital: {
-    text: 'My practice is now expanding into creative technology, projection mapping, interactive web design and digital immersivity. I am exploring how digital tools can extend the same values that run through my physical work: participation, atmosphere, accessibility, storytelling and shared experience.',
+    lead: 'I am committed to lifelong learning and I am continually expanding my knowledge of coding, UX and UI design principles.',
+    text: 'These skills provide a multitude of possibilities for developing immersive environments, while also strengthening my understanding of how people interact with and experience designed systems.\n\nI am interested in how digital technologies can expand the world-building already present within my installation practice. Whether through responsive environments, projection mapping, VJing or dynamic and interactive online spaces, I see digital tools as another way of creating and enhancing meaningful engagement rather than as a separate discipline.\n\nMy proposed DYCP will allow me sufficient time to deepen this area of research, exploring how responsive technologies can support immersive worldbuilding, accessibility and create new opportunities for audiences to engage with my work both online and in physical spaces.',
     images: [
       { src: img('images/digital-1.webp'), alt: 'Digital artwork still with layered light and color.' },
       { src: img('images/digital-2.mp4'), alt: 'Digital artwork loop showing moving light and texture.', type: 'video' },
     ],
   },
   closing: {
-    links: [
-      { label: 'Instagram', href: 'https://instagram.com/' },
-      { label: 'LinkedIn', href: 'https://linkedin.com/' },
-      { label: 'Website', href: 'https://example.com' },
-      { label: 'GitHub', href: 'https://github.com/kimpiffy' },
-    ],
+    message: 'I appreciate the time it will have taken you to read through my application.',
   },
 }

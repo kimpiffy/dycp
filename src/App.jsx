@@ -45,6 +45,7 @@ function App() {
         mediaNudge="scatter"
         className="visual-worlds-intro"
       >
+        <p className="project-collaborator">{content.visualWorlds.lead}</p>
         {renderParagraphs(content.visualWorlds.text)}
       </StorySection>
 
@@ -96,13 +97,27 @@ function App() {
       />
 
       <StorySection
-        title="Workshops / co-creation"
+        title="Workshops & Co-Creation"
         tone="glow"
         id="workshops"
         images={content.workshops.images}
         reducedMotion={reducedMotion}
+        className="workshops-section"
       >
-        {renderParagraphs(content.workshops.text)}
+        <p>
+          <span style={{ color: 'var(--accent-pink)' }}>
+            I have facilitated creative workshops with a range of community groups, including ongoing work with the Monday Night Club.
+          </span>
+        </p>
+        <p>
+          These experiences have shaped my interest in accessibility and co-creation, reinforcing my belief that environments should be flexible enough to accommodate different ways of engaging, rather than expecting people to conform to a single way of experiencing them. Working alongside people with different needs and perspectives has strengthened my understanding of how thoughtful design can create richer and more inclusive experiences for everyone.
+        </p>
+        <p>
+          I do not view environments and artwork as things to be passively consumed, and for this reason I am increasingly interested in how participants might contribute to and influence creative work from an earlier stage in the development process.
+        </p>
+        <p>
+          I would like to explore this further after a period of focused research and development which I believe will allow me to investigate approaches that could support more collaborative and responsive ways of designing immersive experiences.
+        </p>
       </StorySection>
 
       <StorySection
@@ -113,17 +128,16 @@ function App() {
         reducedMotion={reducedMotion}
         className="digital-experimentation"
       >
+        <p className="project-collaborator">{content.digital.lead}</p>
         {renderParagraphs(content.digital.text)}
       </StorySection>
 
-      <section className="journey-section tone-magenta compact social-links-section" aria-label="Social links">
-        <div className="section-inner social-links-inner">
-          <div className="social-links-grid">
-            {content.closing.links.map((link) => (
-              <a key={link.label} className="social-link-button" href={link.href} target="_blank" rel="noreferrer">
-                {link.label}
-              </a>
-            ))}
+      <section className="journey-section tone-magenta compact thank-you-section" aria-label="Thank you">
+        <div className="section-inner thank-you-inner">
+          <div className="thank-you-copy">
+            <h2 className="thank-you-title">THANK YOU</h2>
+            <p className="thank-you-message">{content.closing.message}</p>
+            <p className="thank-you-credit">Made with <span className="heart-icon" aria-hidden="true">♥</span> by Kim Piffy</p>
           </div>
         </div>
       </section>

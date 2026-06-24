@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 
 const STAR_COUNT = 220
-const CLUSTER_DEPTH = 86
-const BOTTOM_PADDING = 8
+const CLUSTER_DEPTH = 0
+const BOTTOM_PADDING = 0
 const STAR_COLORS = [
   { r: 224, g: 255, b: 154 },
   { r: 255, g: 119, b: 214 },
