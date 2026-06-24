@@ -4,7 +4,7 @@ function renderParagraphs(text) {
   return text.split('\n\n').map((paragraph, index) => <p key={`${index}-${paragraph}`}>{paragraph}</p>)
 }
 
-function ProjectIntro({ project, reducedMotion, reverse = false }) {
+function ProjectIntro({ project, reducedMotion, reverse = false, className = '' }) {
   return (
     <StorySection
       title={project.title}
@@ -12,6 +12,7 @@ function ProjectIntro({ project, reducedMotion, reverse = false }) {
       reverse={reverse}
       images={(project.sequence ?? project.insideImages)?.slice(0, 4)}
       reducedMotion={reducedMotion}
+      className={className}
     >
       <p className="project-collaborator">{project.collaborator}</p>
       {renderParagraphs(project.text)}

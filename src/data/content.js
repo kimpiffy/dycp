@@ -41,12 +41,13 @@ export const content = {
     tone: 'blue',
     text: 'My first creative health commission was a surreal landscape which featured atmospheric and symbolic elements including 1,000 origami cranes. Neurodivergent participants and local young people co-created fish for the river and footprints to light the path. Visitors were invited to walk through the space, interact with the environment, and share their own message for others to read.',
     sequence: [
-      { src: img('images/bridges-cranes.webp'), alt: 'Paper cranes suspended in glowing light.' },
-      { src: img('images/bridges-river.webp'), alt: 'A glowing river path through the installation.' },
-      { src: img('images/bridges-wishing-wall.webp'), alt: 'Wishing wall filled with participant messages.' },
-      { src: img('images/bridges-writing.webp'), alt: 'People writing wishes during the event.' },
-      { src: img('images/bridges-interaction.webp'), alt: 'Public interaction inside the immersive space.' },
+      { src: img('images/bridges-1.webp'), alt: 'Paper cranes suspended in glowing light.' },
+      { src: img('images/bridges-2.webp'), alt: 'A glowing river path through the installation.' },
+      { src: img('images/bridges-3.webp'), alt: 'Wishing wall filled with participant messages.' },
+      { src: img('images/bridges-4.webp'), alt: 'People writing wishes during the event.' },
+      { src: img('images/bridges-5.webp'), alt: 'Public interaction inside the immersive space.' },
     ],
+    belowImage: { src: img('images/bridges-6.webp'), alt: 'Public interaction inside the immersive space.' },
   },
   wishingTree: {
     title: 'The Wishing Tree',
@@ -56,12 +57,12 @@ export const content = {
     insideText:
       'The project introduced me to new materials and solidified my understanding of spatial planning, audience flow and accessible participation.',
     insideImages: [
-      { src: img('images/tree-underneath.webp'), alt: 'Young people sitting beneath the glowing tree.' },
-      { src: img('images/tree-wheelchair.webp'), alt: 'Wheelchair user participating in the tree space.' },
-      { src: img('images/tree-stars.webp'), alt: 'Visitors hanging wish stars from branches.' },
-      { src: img('images/tree-stars-close.webp'), alt: 'Close-up of glowing stars with handwritten wishes.' },
-      { src: img('images/tree-texture.webp'), alt: 'Textural detail of the tree structure and lighting.' },
+      { src: img('images/tree-1.webp'), alt: 'Young people sitting beneath the glowing tree.' },
+      { src: img('images/tree-2.webp'), alt: 'Wheelchair user participating in the tree space.' },
+      { src: img('images/tree-3.webp'), alt: 'Visitors hanging wish stars from branches.' },
+      { src: img('images/tree-4.webp'), alt: 'Close-up of glowing stars with handwritten wishes.' },
     ],
+    belowImage: { src: img('images/tree-5.webp'), alt: 'Textural detail of the tree structure and lighting.' },
   },
   workshops: {
     text: "Workshops allow participants to contribute directly to installations. I'd like to take this one step further and have the opportunity to design an installation with them, making the environment something built with people rather than simply shown to them.",

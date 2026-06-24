@@ -222,6 +222,162 @@ h2 {
   justify-content: center;
 }
 
+.wishing-tree-intro .story-copy,
+.bridges-intro .story-copy {
+  max-width: 20.5rem;
+}
+
+.wishing-tree-intro .story-copy p,
+.bridges-intro .story-copy p {
+  max-width: 20.5rem;
+}
+
+.wishing-tree-intro .story-media,
+.bridges-intro .story-media {
+  width: min(100%, 1848px);
+}
+
+.bridges-intro .story-media {
+  width: calc(100% + 50px);
+  margin-left: -50px;
+}
+
+.wishing-tree-intro .gallery-collage,
+.bridges-intro .gallery-collage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-items: start;
+  column-gap: clamp(0.85rem, 1.7vw, 1.75rem);
+  row-gap: clamp(0.85rem, 1.4vw, 1.25rem);
+}
+
+.wishing-tree-intro .gallery-collage .image-reveal,
+.bridges-intro .gallery-collage .image-reveal {
+  width: 100%;
+  max-width: none;
+  flex: none;
+  justify-self: start;
+}
+
+.wishing-tree-intro .gallery-collage .image-reveal:nth-child(1),
+.bridges-intro .gallery-collage .image-reveal:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 4;
+  aspect-ratio: 4 / 3;
+  width: 125%;
+  margin-top: -80px;
+  transform: rotate(-6deg) translate(-50px, 0);
+}
+
+.wishing-tree-intro .gallery-collage .image-reveal:nth-child(2),
+.bridges-intro .gallery-collage .image-reveal:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  z-index: 5;
+  aspect-ratio: 4 / 3;
+  width: 125%;
+  transform: rotate(1deg) translate(-30px, -8px);
+}
+
+.wishing-tree-intro .gallery-collage .image-reveal.visible:nth-child(2),
+.bridges-intro .gallery-collage .image-reveal.visible:nth-child(2) {
+  transform: rotate(5deg) translate(20px, -8px);
+}
+
+.wishing-tree-intro .gallery-collage .image-reveal:nth-child(3),
+.bridges-intro .gallery-collage .image-reveal:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+  z-index: 2;
+  aspect-ratio: 4 / 3;
+  width: 125%;
+  margin-top: 0;
+  transform: rotate(2deg) translate(-44px, 18px);
+}
+
+.wishing-tree-intro .gallery-collage .image-reveal:nth-child(4),
+.bridges-intro .gallery-collage .image-reveal:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+  z-index: 1;
+  aspect-ratio: 4 / 3;
+  width: 125%;
+  margin-top: 0;
+  transform: rotate(-3deg) translate(22px, 70px);
+}
+
+.story-section.wishing-tree-below-image .story-media {
+  width: 100%;
+  max-width: none;
+}
+
+.story-section.wishing-tree-below-image .gallery {
+  width: 100%;
+  justify-content: center;
+}
+
+.story-section.bridges-below-image .story-media {
+  width: 100%;
+  max-width: none;
+}
+
+.story-section.bridges-below-image .gallery {
+  width: 100%;
+  justify-content: center;
+}
+
+.bridges-intro .story-media .gallery {
+  justify-content: flex-start;
+}
+
+.bridges-intro .gallery-collage .image-reveal:nth-child(1) {
+  transform: rotate(-6deg) translate(-80px, 0);
+}
+
+.bridges-intro .gallery-collage .image-reveal:nth-child(2) {
+  transform: rotate(1deg) translate(-60px, -8px);
+}
+
+.bridges-intro .gallery-collage .image-reveal.visible:nth-child(2) {
+  transform: rotate(5deg) translate(-60px, -8px);
+}
+
+.bridges-intro .gallery-collage .image-reveal:nth-child(3) {
+  z-index: 6;
+  transform: rotate(2deg) translate(-74px, -12px);
+}
+
+.bridges-intro .gallery-collage .image-reveal:nth-child(4) {
+  z-index: 7;
+  transform: rotate(-5deg) translate(-28px, 50px);
+}
+
+.wishing-tree-intro .gallery-collage .image-reveal:nth-child(1) {
+  width: 150%;
+  transform: rotate(-6deg) translate(-20px, 0);
+}
+
+.wishing-tree-intro .gallery-collage .image-reveal:nth-child(2) {
+  width: 150%;
+  transform: rotate(1deg) translate(0, -8px);
+}
+
+.wishing-tree-intro .gallery-collage .image-reveal.visible:nth-child(2) {
+  transform: rotate(5deg) translate(50px, -8px);
+}
+
+.wishing-tree-intro .gallery-collage .image-reveal:nth-child(3) {
+  width: 150%;
+  transform: rotate(2deg) translate(-14px, 18px);
+}
+
+.wishing-tree-intro .gallery-collage .image-reveal:nth-child(4) {
+  width: 150%;
+  transform: rotate(-3deg) translate(52px, 70px);
+}
+
 #introduction {
   margin-top: -180px;
 }
@@ -681,6 +837,23 @@ h2 {
 
   .story-media {
     margin-top: 0;
+  }
+
+  .wishing-tree-intro .story-copy,
+  .wishing-tree-intro .story-copy p,
+  .wishing-tree-intro .story-media {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .wishing-tree-intro .gallery-collage .image-reveal {
+    flex-basis: 100%;
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .story-section.wishing-tree-below-image .story-media {
+    width: 100%;
   }
 
   .i-am-piffy-panorama-media {

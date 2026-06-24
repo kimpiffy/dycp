@@ -70,17 +70,37 @@ function App() {
         mediaNudge="intro"
       />
 
-      <ProjectIntro project={content.bridgesOfLight} reducedMotion={reducedMotion} />
+      <ProjectIntro project={content.bridgesOfLight} reducedMotion={reducedMotion} className="bridges-intro" />
 
-      <ProjectIntro project={content.wishingTree} reducedMotion={reducedMotion} reverse />
+      <StorySection
+        hideTitle
+        tone="blue"
+        images={[content.bridgesOfLight.belowImage]}
+        reducedMotion={reducedMotion}
+        fullWidthMedia
+        mediaAlignment="center"
+        className="bridges-below-image"
+      />
+
+      <ProjectIntro project={content.wishingTree} reducedMotion={reducedMotion} reverse className="wishing-tree-intro" />
+
+      <StorySection
+        hideTitle
+        tone="earth"
+        images={[content.wishingTree.belowImage]}
+        reducedMotion={reducedMotion}
+        fullWidthMedia
+        mediaAlignment="center"
+        className="wishing-tree-below-image"
+      />
 
       <StorySection
         title="Workshops / co-creation"
         tone="glow"
         images={[
           { src: '/images/intro-kim-2.webp', alt: 'Kim preparing immersive exhibition materials.' },
-          { src: '/images/tree-stars.webp', alt: 'Visitors hanging wish stars from branches.' },
-          { src: '/images/bridges-writing.webp', alt: 'People writing wishes during the event.' },
+          { src: '/images/tree-3.webp', alt: 'Visitors hanging wish stars from branches.' },
+          { src: '/images/bridges-4.webp', alt: 'People writing wishes during the event.' },
           { src: '/images/digital-web.webp', alt: 'Interactive web visual experiment.' },
         ]}
         reducedMotion={reducedMotion}
