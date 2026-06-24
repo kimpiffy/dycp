@@ -13,7 +13,7 @@ export const content = {
     ],
   },
   visualWorlds: {
-    text: 'My interests in mythology, philosophy and semiotics are driving influences for my art and illustration. I often work with textiles and design surface patterns.\n\nWhatever medium I am working in, I have always been drawn to finding ways to incorporate light as a material.',
+    text: 'My interests in mythology, philosophy and semiotics have always been a driving influence for my art and illustration. I often work with textiles and design surface patterns. Whatever medium I am working in, I have always been drawn to finding ways to incorporate light as a material.',
     images: [
       { src: '/images/visual-world-1.webp', alt: 'Mythic artwork with luminous symbols.' },
       { src: '/images/visual-world-2.webp', alt: 'Contemporary illustration with layered forms.' },
@@ -22,22 +22,22 @@ export const content = {
     ],
   },
   iAmPiffy: {
-    intro: 'Self-funded and curated exhibition at Centrespace Gallery, Bristol.',
-    text: 'My first solo exhibition presented an introspective, autobiographical body of work that drew on archetypes to shift from personal experience into universally recognisable themes.\n\nI curated an ultra-violet environment that transformed the gallery into an immersive audio-visual space. I organised an accompanying independent makers\' market and experimented with VJing software for the first time, which allowed me to project kaleidoscopic animations generated from my artworks and synchronise them to music played by live DJ\'s at the open view.\n\nThe exhibition became an early exploration of immersive space.',
+    intro: 'Self funded and curated exhibition at Centrespace Gallery., Bristol.',
+    text: 'My first solo exhibition presented an introspective, autobiographical body of work that drew on archetypes to shift from personal experience into universally recognisable themes.\n\nI transformed the gallery into an immersive ultra-violet environment and organised an accompanying independent makers’ market. During the open view, I experimented with VJ software for the first time, creating kaleidoscopic animations derived from my artworks and synchronising them with live DJ performances.\n\nThis project marked an early exploration of exhibition-making as world-building.',
     images: [
       { src: '/images/i-am-piffy-1.webp', alt: 'UV-lit autobiographical artwork display.' },
       { src: '/images/i-am-piffy-2.webp', alt: 'Visitors moving through I Am Piffy exhibition.' },
       { src: '/images/i-am-piffy-3.webp', alt: 'Glowing details from I Am Piffy pieces.' },
-      { src: '/images/i-am-piffy-4.webp', alt: 'Delinquency.' },
-      { src: '/images/i-am-piffy-5.webp', alt: 'Vanity.' },
-      { src: '/images/i-am-piffy-6.webp', alt: 'Transcendence.' },
+      { src: '/images/i-am-piffy-4.webp', alt: 'Additional I Am Piffy exhibition detail.' },
+      { src: '/images/i-am-piffy-5.webp', alt: 'Additional I Am Piffy installation view.' },
+      { src: '/images/i-am-piffy-6.webp', alt: 'Additional I Am Piffy artwork and space detail.' },
     ],
   },
   bridgesOfLight: {
     title: 'Imagining a Bright Future',
     collaborator: 'An immersive light installation for Bridges of Light by Severn Arts, Worcester.',
     tone: 'blue',
-    text: 'My first creative health commission was a surreal landscape which featured atmospheric and symbolic elements including 1,000 origami cranes.\n\nNeurodivergent participants and local young people co-created fish for the river and footprints to light the path.\n\nVisitors were invited to walk through the space, interact with the environment, and share their own message for others to read surrounding a "portal" to the future!',
+    text: 'My first creative health commission was a surreal landscape which featured atmospheric and symbolic elements including 1,000 origami cranes. Neurodivergent participants and local young people co-created fish for the river and footprints to light the path. Visitors were invited to walk through the space, interact with the environment, and share their own message for others to read.',
     sequence: [
       { src: '/images/bridges-cranes.webp', alt: 'Paper cranes suspended in glowing light.' },
       { src: '/images/bridges-river.webp', alt: 'A glowing river path through the installation.' },
@@ -48,9 +48,9 @@ export const content = {
   },
   wishingTree: {
     title: 'The Wishing Tree',
-    collaborator: 'A sensory calming zone at The Festival of Play by Scala, Worcester.',
+    collaborator: 'A sensory calming zone at The Festival of Play, hosted by Scala, Worcester.',
     tone: 'earth',
-    text: 'This ambitious involved fabricating a large, transportable, glowing tree structure that invited visitors to create and hang wishes from the branches.\n\nThe installation evolved through each contribution, becoming a living record of the community’s collective hopes and aspirations.',
+    text: 'This ambitious involved fabricating a large, transportable, glowing tree structure that invited visitors to create and hang wishes from the branches. The installation evolved through each contribution, becoming a living record of the community’s collective hopes and aspirations.',
     insideText:
       'The project introduced me to new materials and solidified my understanding of spatial planning, audience flow and accessible participation.',
     insideImages: [
@@ -62,7 +62,7 @@ export const content = {
     ],
   },
   workshops: {
-    text: 'Working with communities is one of the most rewarding aspects of my practice, and over time I have developed experience facilitating accessible, creative participation within a range of settings. These opportunities have shown me the value of co-creation, while also highlighting how the scope for participant involvement is often shaped by pre-existing project objectives and timelines.\n\nAs my practice develops, I am becoming increasingly interested in exploring how communities might be involved at earlier stages and how they might contribute more activley to a projects development. I see a potential period of self-development as an opportunity to strengthen my methodology which would enable me to initiate and lead projects on my own terms, confidently.',
+    text: "Workshops allow participants to contribute directly to installations, I'd like to take this one step further and have the opportunity to design an installation with them; making the environment something built with people rather than simply shown to them.",
   },
   digital: {
     text: 'My practice is now expanding into creative technology, projection mapping, interactive web design and digital immersivity. I am exploring how digital tools can extend the same values that run through my physical work: participation, atmosphere, accessibility, storytelling and shared experience.',

@@ -22,7 +22,7 @@ function ImageReveal({ image, delay = 0, reducedMotion = false, fullWidth = fals
           observer.disconnect()
         }
       },
-      { threshold: 0.2 },
+      { threshold: 0.35 },
     )
 
     observer.observe(imageRef.current)
