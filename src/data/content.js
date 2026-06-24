@@ -15,7 +15,7 @@ export const content = {
     ],
   },
   visualWorlds: {
-    text: 'My interests in mythology, philosophy and semiotics have always been a driving influence for my art and illustration. I often work with textiles and design surface patterns. Whatever medium I am working in, I have always been drawn to finding ways to incorporate light as a material.',
+    text: 'My interests in mythology, philosophy and semiotics have always been a driving influence for my art and illustration. I often work with textiles and design surface patterns. Whatever medium I am working in, I have always been drawn to finding ways to incorporate colourful and tactile elements, and use light as a material.',
     images: [
       { src: img('images/visual-world-1.webp'), alt: 'Mythic artwork with luminous symbols.' },
       { src: img('images/visual-world-2.webp'), alt: 'Contemporary illustration with layered forms.' },
