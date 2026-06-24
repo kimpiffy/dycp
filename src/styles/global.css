@@ -518,6 +518,10 @@ h2 {
   transform: rotate(1deg) translate(calc(var(--i-am-piffy-three-x) + 4px), calc(var(--i-am-piffy-three-y) + 24px));
 }
 
+#workshops .gallery-collage .image-reveal:nth-child(4) {
+  z-index: 6;
+}
+
 .story-body.copy-only {
   grid-template-columns: minmax(0, 1fr);
 }

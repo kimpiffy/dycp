@@ -65,6 +65,12 @@ export const content = {
     belowImage: { src: img('images/tree-5.webp'), alt: 'Textural detail of the tree structure and lighting.' },
   },
   workshops: {
+    images: [
+      { src: img('images/workshops-1.webp'), alt: 'Kim preparing immersive exhibition materials.' },
+      { src: img('images/workshops-2.webp'), alt: 'Visitors hanging wish stars from branches.' },
+      { src: img('images/workshops-3.webp'), alt: 'People writing wishes during the event.' },
+      { src: img('images/workshops-4.webp'), alt: 'Interactive web visual experiment.' },
+    ],
     text: "Workshops allow participants to contribute directly to installations. I'd like to take this one step further and have the opportunity to design an installation with them, making the environment something built with people rather than simply shown to them.",
   },
   digital: {

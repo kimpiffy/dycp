@@ -97,12 +97,8 @@ function App() {
       <StorySection
         title="Workshops / co-creation"
         tone="glow"
-        images={[
-          { src: '/images/intro-kim-2.webp', alt: 'Kim preparing immersive exhibition materials.' },
-          { src: '/images/tree-3.webp', alt: 'Visitors hanging wish stars from branches.' },
-          { src: '/images/bridges-4.webp', alt: 'People writing wishes during the event.' },
-          { src: '/images/digital-web.webp', alt: 'Interactive web visual experiment.' },
-        ]}
+        id="workshops"
+        images={content.workshops.images}
         reducedMotion={reducedMotion}
       >
         {renderParagraphs(content.workshops.text)}
