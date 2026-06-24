@@ -95,6 +95,20 @@ function FallingStars({ reducedMotion = false }) {
     let lastWidth = window.innerWidth
     let lastWorldHeight = document.documentElement.scrollHeight
 
+    const syncStarTargets = (worldHeight) => {
+      for (const star of stars) {
+        const targetSettleY = worldHeight
+
+        if (star.settleY !== targetSettleY) {
+          star.settleY = targetSettleY
+        }
+
+        if (star.settled && star.y < star.settleY) {
+          star.settled = false
+        }
+      }
+    }
+
     const setCanvasSize = ({ preserveStars = true } = {}) => {
       const dpr = window.devicePixelRatio || 1
       const width = window.innerWidth
@@ -146,6 +160,7 @@ function FallingStars({ reducedMotion = false }) {
 
       lastWidth = width
       lastWorldHeight = worldHeight
+      syncStarTargets(worldHeight)
     }
 
     const animate = (timestamp) => {
@@ -161,6 +176,8 @@ function FallingStars({ reducedMotion = false }) {
 
       lastTimestamp = timestamp
       lastScrollY = scrollY
+
+      syncStarTargets(worldHeight)
 
       context.clearRect(0, 0, width, height)
 

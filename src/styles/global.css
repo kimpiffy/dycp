@@ -249,8 +249,8 @@ h2 {
 }
 
 .workshops-section .gallery-collage .image-reveal {
-  flex: 1 1 clamp(165px, 24vw, 275px);
-  max-width: 306px;
+  flex: 1 1 clamp(137px, 19.9vw, 228px);
+  max-width: 254px;
 }
 
 .wishing-tree-intro .story-copy,
@@ -563,7 +563,15 @@ h2 {
 }
 
 #workshops .gallery-collage .image-reveal:nth-child(3) {
-  transform: rotate(-1deg) translate(-110px, -70px);
+  transform: rotate(-1deg) translate(40px, -145px);
+}
+
+#workshops .gallery-collage .image-reveal:nth-child(1) {
+  transform: rotate(-2.5deg) translate(-130px, 0.4rem);
+}
+
+#workshops .gallery-collage .image-reveal:nth-child(2) {
+  transform: rotate(2deg) translate(-130px, calc(1.2rem + 50px));
 }
 
 .story-body.copy-only {
@@ -784,7 +792,7 @@ h2 {
 
 .thank-you-section {
   padding-top: 2rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 7rem;
 }
 
 body {
