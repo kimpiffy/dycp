@@ -43,6 +43,7 @@ function App() {
         images={content.visualWorlds.images}
         reducedMotion={reducedMotion}
         mediaNudge="scatter"
+        className="visual-worlds-intro"
       >
         {renderParagraphs(content.visualWorlds.text)}
       </StorySection>
@@ -110,6 +111,7 @@ function App() {
         reverse
         images={content.digital.images}
         reducedMotion={reducedMotion}
+        className="digital-experimentation"
       >
         {renderParagraphs(content.digital.text)}
       </StorySection>

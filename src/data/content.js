@@ -25,7 +25,7 @@ export const content = {
   },
   iAmPiffy: {
     intro: 'Self-funded and curated exhibition at Centrespace Gallery, Bristol.',
-    text: 'My first solo exhibition presented an introspective, autobiographical body of work that drew on archetypes to shift from personal experience into universally recognisable themes.\n\nI transformed the gallery into an immersive ultra-violet environment and organised an accompanying independent makers’ market. For the open view, I experimented with VJ software for the first time, creating kaleidoscopic animations derived from my artworks and synchronising them with live DJ performances.\n\nThis project marked an early exploration of exhibition-making as world-building.',
+    text: 'My first solo exhibition presented an introspective, autobiographical body of work that drew on archetypes to shift from personal experience into universally recognisable themes.\n\nI transformed the gallery into an immersive ultra-violet environment and organised an accompanying independent makers’ market. For the open view, I experimented with VJ software for the first time, creating kaleidoscopic animations derived from my artworks which were synchronised to the music during live DJ performances.\n\nThis project marked an early exploration of immersive world-building.',
     images: [
       { src: img('images/i-am-piffy-1.webp'), alt: 'UV-lit autobiographical artwork display.' },
       { src: img('images/i-am-piffy-2.webp'), alt: 'Visitors moving through I Am Piffy exhibition.' },
@@ -39,7 +39,7 @@ export const content = {
     title: 'Imagining a Bright Future',
     collaborator: 'An immersive light installation for Bridges of Light by Severn Arts, Worcester.',
     tone: 'blue',
-    text: 'My first creative health commission was a surreal landscape which featured atmospheric and symbolic elements including 1,000 origami cranes. Neurodivergent participants and local young people co-created fish for the river and footprints to light the path. Visitors were invited to walk through the space, interact with the environment, and share their own message for others to read.',
+    text: 'This installation invited visitors to move through a landscape which included elements such as bridges, a glowing river and 1,000 origami cranes which were suspended overhead.\n\nNeurodivergent adults and disadvantaged young people created fish for the river and footprints to light the path.\n\nVisitors were invited to walk through the space, relax in the chill out area, enjoy the visuals with a calming soundscape, and share their own message for others to read around the portal into the future!\n\nCreating this installation shifted my focus beyond visual outcomes and towards the experience of the audience. I became excited by how sensory design could encourage calmness, curiosity, reflection and engagement.',
     sequence: [
       { src: img('images/bridges-1.webp'), alt: 'Paper cranes suspended in glowing light.' },
       { src: img('images/bridges-2.webp'), alt: 'A glowing river path through the installation.' },
@@ -53,9 +53,7 @@ export const content = {
     title: 'The Wishing Tree',
     collaborator: 'A sensory calming zone at The Festival of Play, hosted by Scala, Worcester.',
     tone: 'earth',
-    text: 'This ambitious project involved fabricating a large, transportable, glowing tree structure that invited visitors to create and hang wishes from the branches. The installation evolved through each contribution, becoming a living record of the community’s collective hopes and aspirations.',
-    insideText:
-      'The project introduced me to new materials and solidified my understanding of spatial planning, audience flow and accessible participation.',
+    text: 'This installation centred around a three-metre, illuminated tree sculpture that I designed and fabricated as the focal point of a sensory environment. Visitors were invited to decorate and hang wishes from the tree which allowed it to function as a living system; evolving to become a collective record of hope and aspiration.\n\nThis ambitious project required me to develop new skills in order to construct the large-scale sculpture. Drawing on my longstanding interest in symbolism and archetypes, I was intrigued by how the familiar image of a tree could act as an intuitive point of connection, encouraging participation without too many instructions or pressure.\n\nAlongside strengthening my interest in participatory settings, this project sparked a growing curiosity about how sculpture and technology might work together in future. Observing the installation transform through audience contribution reinforced my interest in creating spaces that remain open to transformation through interaction.',
     insideImages: [
       { src: img('images/tree-1.webp'), alt: 'Young people sitting beneath the glowing tree.' },
       { src: img('images/tree-2.webp'), alt: 'Wheelchair user participating in the tree space.' },
@@ -76,10 +74,8 @@ export const content = {
   digital: {
     text: 'My practice is now expanding into creative technology, projection mapping, interactive web design and digital immersivity. I am exploring how digital tools can extend the same values that run through my physical work: participation, atmosphere, accessibility, storytelling and shared experience.',
     images: [
-      { src: img('images/digital-mapping.webp'), alt: 'Projection mapping trial with layered light.' },
-      { src: img('images/digital-lightspace.webp'), alt: 'LightSpace app interface experiments.' },
-      { src: img('images/digital-web.webp'), alt: 'Interactive web visual experiment.' },
-      { src: img('images/digital-particles.webp'), alt: 'Digital visual showing responsive particles.' },
+      { src: img('images/digital-1.webp'), alt: 'Digital artwork still with layered light and color.' },
+      { src: img('images/digital-2.mp4'), alt: 'Digital artwork loop showing moving light and texture.', type: 'video' },
     ],
   },
   closing: {
