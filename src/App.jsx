@@ -25,34 +25,45 @@ function App() {
   }, [])
 
   useEffect(() => {
-    let pageLoaded = document.readyState === 'complete'
-    let minimumElapsed = false
+    const imageElements = Array.from(document.querySelectorAll('.page-content img'))
 
-    const finishLoading = () => {
-      if (pageLoaded && minimumElapsed) {
+    if (imageElements.length === 0) {
+      setIsLoading(false)
+      return undefined
+    }
+
+    let cancelled = false
+    let remainingImages = imageElements.length
+
+    const markImageComplete = () => {
+      remainingImages -= 1
+
+      if (!cancelled && remainingImages <= 0) {
         setIsLoading(false)
       }
     }
 
-    const handleLoad = () => {
-      pageLoaded = true
-      finishLoading()
+    imageElements.forEach((image) => {
+      if (image.complete && image.naturalWidth > 0) {
+        remainingImages -= 1
+        return
+      }
+
+      image.addEventListener('load', markImageComplete, { once: true })
+      image.addEventListener('error', markImageComplete, { once: true })
+    })
+
+    if (remainingImages <= 0) {
+      setIsLoading(false)
     }
-
-    const minimumDelay = window.setTimeout(() => {
-      minimumElapsed = true
-      finishLoading()
-    }, 900)
-
-    if (!pageLoaded) {
-      window.addEventListener('load', handleLoad, { once: true })
-    }
-
-    finishLoading()
 
     return () => {
-      window.clearTimeout(minimumDelay)
-      window.removeEventListener('load', handleLoad)
+      cancelled = true
+
+      imageElements.forEach((image) => {
+        image.removeEventListener('load', markImageComplete)
+        image.removeEventListener('error', markImageComplete)
+      })
     }
   }, [])
 

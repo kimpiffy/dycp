@@ -67,7 +67,7 @@ function ImageReveal({ image, delay = 0, reducedMotion = false, fullWidth = fals
         <img
           src={image.src}
           alt={image.alt}
-          loading="lazy"
+          loading="eager"
           decoding="async"
           width="1600"
           height="900"
