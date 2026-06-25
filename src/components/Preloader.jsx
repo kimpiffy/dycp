@@ -78,9 +78,8 @@ function Preloader({ reducedMotion = false }) {
       const size = Math.min(window.innerWidth, window.innerHeight, 220)
       const center = size / 2
       const orbitRadius = size * 0.28
-      const deltaMs = lastTimestamp ? timestamp - lastTimestamp : 16
-      const deltaSeconds = Math.min(deltaMs / 1000, 0.05)
       const rotationSpeed = reducedMotion ? 0.2 : 1.15
+      const headAngle = timestamp * 0.0015 * rotationSpeed
 
       lastTimestamp = timestamp
 
@@ -96,13 +95,31 @@ function Preloader({ reducedMotion = false }) {
       context.restore()
 
       stars.forEach((star, index) => {
-        const angle = star.angle + timestamp * 0.0014 * rotationSpeed
-        const pulse = 0.84 + Math.sin(timestamp * 0.005 + star.phase) * 0.16
+        const angle = star.angle
+        const distance = Math.abs(Math.atan2(Math.sin(angle - headAngle), Math.cos(angle - headAngle)))
+        const pulse = Math.pow(Math.max(0, Math.cos(distance)), 5)
+        const twinkle = 0.92 + Math.sin(timestamp * 0.005 + star.phase) * 0.08
         const x = center + Math.cos(angle) * orbitRadius
         const y = center + Math.sin(angle) * orbitRadius
-        const alpha = 0.7 + Math.sin(timestamp * 0.006 + index) * 0.12
+        const alpha = (0.08 + pulse * 0.92) * twinkle
+        const size = star.size * (0.75 + pulse * 0.55) * 6.2
 
-        drawOrbitStar(context, x, y, star.size * pulse * 6.2, star.color, alpha, angle + deltaSeconds * 0.5)
+        drawOrbitStar(context, x, y, size, star.color, alpha, angle + index * 0.12)
+
+        if (pulse > 0.7) {
+          const trailAngle = angle - Math.PI / 10
+          const trailX = center + Math.cos(trailAngle) * (orbitRadius - 2)
+          const trailY = center + Math.sin(trailAngle) * (orbitRadius - 2)
+
+          context.save()
+          context.strokeStyle = `rgba(${star.color.r}, ${star.color.g}, ${star.color.b}, ${0.18 * pulse})`
+          context.lineWidth = Math.max(0.5, size * 0.08)
+          context.beginPath()
+          context.moveTo(trailX, trailY)
+          context.lineTo(x, y)
+          context.stroke()
+          context.restore()
+        }
       })
 
       frameId = window.requestAnimationFrame(animate)
