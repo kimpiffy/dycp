@@ -6,6 +6,8 @@ const PRELOADER_COLORS = [
   { r: 246, g: 217, b: 74 },
 ]
 
+const PRELOADER_TRAIL_COLORS = [PRELOADER_COLORS[1], PRELOADER_COLORS[2]]
+
 function drawOrbitStar(ctx, x, y, size, color, alpha, rotation) {
   const ray = size * 2.2
 
@@ -60,7 +62,7 @@ function Preloader({ reducedMotion = false }) {
     }
     const trailStar = {
       size: 0.82,
-      color: PRELOADER_COLORS[2],
+      color: PRELOADER_TRAIL_COLORS[0],
     }
 
     const setCanvasSize = () => {
@@ -99,8 +101,9 @@ function Preloader({ reducedMotion = false }) {
         const glitterPulse = 0.52 + Math.sin(timestamp * 0.012 - index * 0.8) * 0.2
         const glitterAlpha = Math.max(0.06, 0.34 - index * 0.05 + glitterPulse * 0.18)
         const glitterSize = Math.max(1.8, 5.2 - index * 0.65) * glitterPulse
+        const glitterColor = PRELOADER_TRAIL_COLORS[index % PRELOADER_TRAIL_COLORS.length]
 
-        drawOrbitStar(context, glitterX, glitterY, glitterSize, trailStar.color, glitterAlpha, glitterAngle)
+        drawOrbitStar(context, glitterX, glitterY, glitterSize, glitterColor, glitterAlpha, glitterAngle)
       }
 
       drawOrbitStar(context, trailX, trailY, trailStar.size * 6.2 * trailPulse, trailStar.color, 0.36 + trailPulse * 0.3, headAngle - trailOffset)
