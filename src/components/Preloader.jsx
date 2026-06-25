@@ -78,11 +78,12 @@ function Preloader({ reducedMotion = false }) {
       const size = Math.min(window.innerWidth, window.innerHeight, 220)
       const center = size / 2
       const orbitRadius = size * 0.22
-      const rotationSpeed = reducedMotion ? 0.18 : 1.1
+      const rotationSpeed = reducedMotion ? 0.34 : 2.1
       const headAngle = timestamp * 0.00135 * rotationSpeed
-      const trailOffset = 0.26
-      const leadPulse = 0.88 + Math.sin(timestamp * 0.0065) * 0.12
-      const trailPulse = 0.72 + Math.sin(timestamp * 0.0065 - 1.2) * 0.1
+      const trailOffset = 0.62
+      const glitterSteps = reducedMotion ? 2 : 6
+      const leadPulse = 0.88 + Math.sin(timestamp * 0.01) * 0.12
+      const trailPulse = 0.68 + Math.sin(timestamp * 0.01 - 1.2) * 0.1
       const leadX = center + Math.cos(headAngle) * orbitRadius
       const leadY = center + Math.sin(headAngle) * orbitRadius
       const trailX = center + Math.cos(headAngle - trailOffset) * (orbitRadius - 2)
@@ -90,17 +91,19 @@ function Preloader({ reducedMotion = false }) {
 
       context.clearRect(0, 0, size, size)
 
-      context.save()
-      context.strokeStyle = 'rgba(224, 255, 154, 0.16)'
-      context.lineWidth = Math.max(0.8, size * 0.012)
-      context.lineCap = 'round'
-      context.beginPath()
-      context.moveTo(trailX, trailY)
-      context.lineTo(leadX, leadY)
-      context.stroke()
-      context.restore()
+      for (let index = 0; index < glitterSteps; index += 1) {
+        const distanceBack = trailOffset + index * 0.22
+        const glitterAngle = headAngle - distanceBack
+        const glitterX = center + Math.cos(glitterAngle) * (orbitRadius - 2)
+        const glitterY = center + Math.sin(glitterAngle) * (orbitRadius - 2)
+        const glitterPulse = 0.52 + Math.sin(timestamp * 0.012 - index * 0.8) * 0.2
+        const glitterAlpha = Math.max(0.06, 0.34 - index * 0.05 + glitterPulse * 0.18)
+        const glitterSize = Math.max(1.8, 5.2 - index * 0.65) * glitterPulse
 
-      drawOrbitStar(context, trailX, trailY, trailStar.size * 6.2 * trailPulse, trailStar.color, 0.38 + trailPulse * 0.34, headAngle - trailOffset)
+        drawOrbitStar(context, glitterX, glitterY, glitterSize, trailStar.color, glitterAlpha, glitterAngle)
+      }
+
+      drawOrbitStar(context, trailX, trailY, trailStar.size * 6.2 * trailPulse, trailStar.color, 0.36 + trailPulse * 0.3, headAngle - trailOffset)
       drawOrbitStar(context, leadX, leadY, leadStar.size * 6.2 * leadPulse, leadStar.color, 0.82 + leadPulse * 0.16, headAngle)
 
       frameId = window.requestAnimationFrame(animate)
