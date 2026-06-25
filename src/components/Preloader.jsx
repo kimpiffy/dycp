@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 
-const PRELOADER_STAR_COUNT = 10
 const PRELOADER_COLORS = [
   { r: 224, g: 255, b: 154 },
   { r: 255, g: 119, b: 214 },
@@ -55,13 +54,14 @@ function Preloader({ reducedMotion = false }) {
     }
 
     let frameId
-    let lastTimestamp = 0
-    let stars = Array.from({ length: PRELOADER_STAR_COUNT }, (_, index) => ({
-      angle: (index / PRELOADER_STAR_COUNT) * Math.PI * 2,
-      size: 0.95 + (index % 4) * 0.12,
-      phase: index * 0.42,
-      color: PRELOADER_COLORS[index % PRELOADER_COLORS.length],
-    }))
+    const leadStar = {
+      size: 1.2,
+      color: PRELOADER_COLORS[0],
+    }
+    const trailStar = {
+      size: 0.82,
+      color: PRELOADER_COLORS[2],
+    }
 
     const setCanvasSize = () => {
       const dpr = window.devicePixelRatio || 1
@@ -77,50 +77,31 @@ function Preloader({ reducedMotion = false }) {
     const animate = (timestamp) => {
       const size = Math.min(window.innerWidth, window.innerHeight, 220)
       const center = size / 2
-      const orbitRadius = size * 0.28
-      const rotationSpeed = reducedMotion ? 0.2 : 1.15
-      const headAngle = timestamp * 0.0015 * rotationSpeed
-
-      lastTimestamp = timestamp
+      const orbitRadius = size * 0.22
+      const rotationSpeed = reducedMotion ? 0.18 : 1.1
+      const headAngle = timestamp * 0.00135 * rotationSpeed
+      const trailOffset = 0.26
+      const leadPulse = 0.88 + Math.sin(timestamp * 0.0065) * 0.12
+      const trailPulse = 0.72 + Math.sin(timestamp * 0.0065 - 1.2) * 0.1
+      const leadX = center + Math.cos(headAngle) * orbitRadius
+      const leadY = center + Math.sin(headAngle) * orbitRadius
+      const trailX = center + Math.cos(headAngle - trailOffset) * (orbitRadius - 2)
+      const trailY = center + Math.sin(headAngle - trailOffset) * (orbitRadius - 2)
 
       context.clearRect(0, 0, size, size)
 
       context.save()
-      context.translate(center, center)
-      context.strokeStyle = 'rgba(224, 255, 154, 0.18)'
-      context.lineWidth = 1
+      context.strokeStyle = 'rgba(224, 255, 154, 0.16)'
+      context.lineWidth = Math.max(0.8, size * 0.012)
+      context.lineCap = 'round'
       context.beginPath()
-      context.arc(0, 0, orbitRadius + 18, 0, Math.PI * 2)
+      context.moveTo(trailX, trailY)
+      context.lineTo(leadX, leadY)
       context.stroke()
       context.restore()
 
-      stars.forEach((star, index) => {
-        const angle = star.angle
-        const distance = Math.abs(Math.atan2(Math.sin(angle - headAngle), Math.cos(angle - headAngle)))
-        const pulse = Math.pow(Math.max(0, Math.cos(distance)), 5)
-        const twinkle = 0.92 + Math.sin(timestamp * 0.005 + star.phase) * 0.08
-        const x = center + Math.cos(angle) * orbitRadius
-        const y = center + Math.sin(angle) * orbitRadius
-        const alpha = (0.08 + pulse * 0.92) * twinkle
-        const size = star.size * (0.75 + pulse * 0.55) * 6.2
-
-        drawOrbitStar(context, x, y, size, star.color, alpha, angle + index * 0.12)
-
-        if (pulse > 0.7) {
-          const trailAngle = angle - Math.PI / 10
-          const trailX = center + Math.cos(trailAngle) * (orbitRadius - 2)
-          const trailY = center + Math.sin(trailAngle) * (orbitRadius - 2)
-
-          context.save()
-          context.strokeStyle = `rgba(${star.color.r}, ${star.color.g}, ${star.color.b}, ${0.18 * pulse})`
-          context.lineWidth = Math.max(0.5, size * 0.08)
-          context.beginPath()
-          context.moveTo(trailX, trailY)
-          context.lineTo(x, y)
-          context.stroke()
-          context.restore()
-        }
-      })
+      drawOrbitStar(context, trailX, trailY, trailStar.size * 6.2 * trailPulse, trailStar.color, 0.38 + trailPulse * 0.34, headAngle - trailOffset)
+      drawOrbitStar(context, leadX, leadY, leadStar.size * 6.2 * leadPulse, leadStar.color, 0.82 + leadPulse * 0.16, headAngle)
 
       frameId = window.requestAnimationFrame(animate)
     }
